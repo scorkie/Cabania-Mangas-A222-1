@@ -16,7 +16,7 @@ public class CustomTokenizer {
         } else {
             token = token.trim();  // Trim spaces around the token for proper classification
 
-            if (token.matches("[a-zA-Z]+")) {
+            if (token.matches("[a-zA-Z]+([']?[a-zA-Z]+)?")) {
                 return "Word";
             } else if (token.matches("\\d+(\\.\\d+)?")) {
                 return "Number";
